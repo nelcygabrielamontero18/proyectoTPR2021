@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/productos', function () {
+    return view('product');
+})->middleware(['auth:sanctum', 'verified'])->name('productos');
+
+Route::get('/ventas',  function () {
+    return view('venta');
+})->middleware(['auth:sanctum', 'verified'])->name('ventas');
+
+Route::get('/ventas/listar',  function () {
+    return view('venta_index');
+})->middleware(['auth:sanctum', 'verified'])->name('ventas.index');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
