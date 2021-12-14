@@ -9,7 +9,6 @@
                         <td>Precio</td>
                         <td>Stock</td>
                         <td>Estado</td>
-                        <td>Foto</td>
                         <td>Acciones</td>
                     </tr>
                 </thead>
@@ -22,7 +21,6 @@
                             <td>{{ $producto->precio }}</td>
                             <td>{{ $producto->stock }}</td>
                             <td>{{ $producto->estado }}</td>
-                            <td>{{ $producto->foto }}</td>
                             <td>
                                 <button type="button" class="" wire:click='edit({{ $producto->id }})'>Editar</button>
                                 <button type="button" class="" wire:click='destroy({{ $producto->id }})'>Borrar</button>

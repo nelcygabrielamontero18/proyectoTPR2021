@@ -37,7 +37,6 @@ class VentaComponent extends Component
 
     public function guardar()
     {
-        print_r($this->productosSelected);
         $venta = new Venta;
         $venta->user_id = Auth::id();
         $venta->total = $this->total;

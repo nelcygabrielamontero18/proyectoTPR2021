@@ -12,6 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/whatsapp.css')}}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
         @livewireStyles
@@ -39,7 +40,11 @@
                 {{ $slot }}
             </main>
         </div>
-
+        <!-- Whatsapp -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=59168720939&text=Un%20gusto%20saludarlo.%20Podria%20brindarme%20mas%20informacion%20sobre%20su%20producto" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
         @stack('modals')
 
         @livewireScripts
